@@ -1,62 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nichapa | Personal Portfolio</title>
+    <title>Nichapa | Portfolio</title>
     <style>
-        /* Basic Styles */
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; margin: 0; color: #333; }
-        header { background: #f4f4f4; padding: 2rem; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 2rem; }
-        nav { text-align: center; margin-bottom: 2rem; }
-        nav a { margin: 0 10px; text-decoration: none; color: #555; font-weight: bold; }
-        
-        /* Portfolio Grid */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .project-card { border: 1px solid #ddd; padding: 1rem; border-radius: 8px; }
-        
-        footer { text-align: center; padding: 2rem; background: #333; color: #fff; margin-top: 2rem; }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin: 0; color: var(--accent-color); }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--accent-color);
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
+    <section class="hero">
         <h1>Nichapa</h1>
-        <p>Creative Portfolio & Professional Showcase</p>
-    </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <p>Creative Designer & Developer</p>
+    </section>
 
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Nichapa. I am a passionate creator focused on building meaningful digital experiences through design and development.</p>
-        </section>
-
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Project One</h3>
-                    <p>Brief description of the work done and the technologies used.</p>
+        <section>
+            <h2>ผลงานที่ผ่านมา</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Project Name 1</h3>
+                    <p>รายละเอียดโปรเจกต์สั้นๆ ที่อธิบายความสามารถและสิ่งที่คุณทำ</p>
+                    <a href="#" class="btn">ดูรายละเอียด</a>
                 </div>
-                <div class="project-card">
-                    <h3>Project Two</h3>
-                    <p>Brief description of the work done and the technologies used.</p>
+                <div class="card">
+                    <h3>Project Name 2</h3>
+                    <p>รายละเอียดโปรเจกต์ที่สอง เน้นผลลัพธ์ที่ได้รับจากการทำงาน</p>
+                    <a href="#" class="btn">ดูรายละเอียด</a>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer id="contact">
-        <p>Connect with me: <a href="mailto:email@example.com" style="color:white;">email@example.com</a></p>
-    </footer>
-
 </body>
 </html>
-
